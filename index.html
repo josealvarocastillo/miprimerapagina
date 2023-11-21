@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aCASTILLO</title>
+    <link
+      rel="shortcut icon"
+      href="./Recursos/Imagenes/resumen IVC final_logo color.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Inicio Java script -->
+    alert("Hola este es mi Javascript");
+
+    <!-- para agregar icono de menu para barra de navegacion responsiva -->
+    <script
+      src="https://kit.fontawesome.com/c9b87a4bee.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="encabezado">
+        <!-- hidden oculta elemento (solo funciona en imagenes?)-->
+        <img
+          id="logo"
+          title="logo"
+          src="./Recursos/Imagenes/resumen IVC final_Cabezote Horizontal.png"
+          alt="logo horizontal"
+        />
+        <nav>
+          <!-- ocultar menu para pantallas pequeñas en responsive -->
+          <input type="checkbox" id="check" />
+          <!-- check box -->
+          <label for="check" class="checkbtn"
+            ><!-- menu de tres lineas (hamburguesa)-->
+            <i class="fa-solid fa-bars"></i>
+          </label>
+          <ul class="menu">
+            <li><a href="index.html#seccion-principal">Inicio</a></li>
+            <li><a href="index.html#perfil">Perfil profesional</a></li>
+            <li><a href="index.html#asesoria">Asesoria</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main id="seccion-principal">
+        <section id="seccion-1">
+          <div class="acerca-de">
+            <h1 class="titulo">ASESORIA Y SERVICIOS</h1>
+            <!-- en el ejercico original la eq}tiqueta era div no h1-->
+            <h2 class="subtitulo">
+              LOGISTICA - SUPPLY CHAIN MANAGEMENT (SCM) - ALMACENAMIENTO -
+              INVENTARIOS
+            </h2>
+            <!-- en el ejercico original la eq}tiqueta era div no h2-->
+            <p class="principal">
+              Conocedor de las problemáticas y debilidades a las que se           enfrentan día a día las organizaciones modernas, en áreas vitales como logística y algunos procesos de la administración de la
+              cadena de abastecimiento (SCM); que, aunque no son el “core” del
+              negocio, impactan negativamente el servicio al cliente. Ya sea      porque las operaciones y procesos no cuentan con el personal          profesional y calificado o se han realizado empíricamente por       años. Presentamos una alternativa para mejorar y fortalecer los       resultados, desempeño e indicadores que sus operaciones necesitan.
+            </p>
+          </div>
+          <!-- <div class="via">
+            <img
+              src="./Recursos/Imagenes/Vias_Casanare (8).JPG"
+              title="via"
+              width="400rem"
+              alt="img-header"
+            />
+          </div> -->
+        </section>
+
+        <section id="seccion-2">
+          <!-- <img
+          src="./Recursos/Imagenes/estanteria.jpg"
+          title="bodega"
+          width="19%"
+          alt="calle"
+          /> -->
+          <!-- <img
+            src="./Recursos/Imagenes/bodega6.jpg"
+            title="bodega"
+            width="19%"
+            alt="calle"
+          /> -->
+          <!-- <img
+            src="./Recursos/Imagenes/bodega3.jpg"
+            title="bodega"
+            width="19%"
+            alt="calle"
+          /> -->
+          <!-- <img
+            src="./Recursos/Imagenes/bodega2.jpg"
+            title="bodega"
+            width="19%"
+            alt="calle"
+          /> -->
+          <img
+            src="./Recursos/Imagenes/Vias_Casanare3.jpg"
+            title="bodega"
+            width="100%"
+            alt="calle"
+          />
+        </section>
+      </main>
+      <section id="perfil">
+        <section>
+        <div class="foto">
+          <img
+            id="foto-ac"
+            src="./Recursos/Imagenes/Foto-aC2.jpg"
+            title="foto-ac"
+            width="100%"
+            alt="foto-ac"
+          />
+        </div>
+
+        <div>
+          <h1 class="titulo">PERFIL PROFESIONAL</h1>
+          <p class="principal">
+            Ingeniero Industrial, con más de 30 años de experiencia en
+            importantes empresas nacionales y multinacionales. Experto en las
+            áreas logísticas de cadena de abastecimiento, planeación de la
+            demanda, facturación, distribución, transporte, almacenamiento,
+            administración de inventarios, planeación estratégica, reingeniería
+            de procesos, planeación de producción, compras e infraestructura
+            física. Habilidades de negociación y estructuración de modelos y
+            proyectos logísticos y SCM. Gran capacidad de liderazgo y manejo de
+            equipos de trabajo orientados a resultados; disposición para el
+            trabajo bajo presión y actitud para asumir permanentemente nuevas
+            responsabilidades y retos. Competencias para el análisis de causas,
+            toma de decisiones y solución efectiva de problemas desde el punto
+            de vista técnico y práctico.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- FORMULARIO -->
+    <section class="form-header">
+      <h1>Contacto</h1>
+      <p><em>¡Esperamos tu consulta!</em></p>
+
+      <form action="" method="get" class="formulario" id="form">
+        <div class="form-row">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="pepe@gmail.com"
+            required 
+          /> <!-- se usa required para que salga el mensaje cuando no se llena el campo o no se coloca @-->
+        </div>
+        <div class="form-row">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje"></textarea>
+        </div>
+        <div class="form-row">
+          <button type="submit" id="submit">Enviar</button>
+        </div>
+        <p class="alertas" id="alertas"></p> <!-- se debe colocar para que funcione el javscript-->
+      </form>
+    </section>
+
+    <footer>
+      <div>
+        <p>contacto@alvarocastillo.co</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>  <!-- linkea el archivo script.js al index.html -->
+
+  </body>
+</html>

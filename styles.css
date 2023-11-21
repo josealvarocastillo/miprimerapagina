@@ -1,0 +1,357 @@
+* {
+ 
+font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  margin: 0;
+  padding: 0;
+} */
+
+ol,
+ul {
+  list-style: none; /* quita viñetas a las listas */
+  margin-right: 2rem;
+}
+
+a {
+  text-decoration: none;
+  /* quita  la decoración de los links (subrayado)*/
+}
+
+#logo {
+  width: 20rem;
+  padding-left: 2rem;
+}
+
+header {
+  background-color: rgb(187, 187, 187);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  /* position: sticky; */
+  /* con position: sticky funciona pero siempre hay que darle el posiconamiento con top: 0px y no requiere el width pero hace un pequeño salto cuando se scroll y hay que quitar margen superior de la proxima etiqueta del header en este caso. ref: https://youtu.be/H9PQXvdR3WQ?t=247 */
+  top: 0rem;
+  width: 100%;
+  height: 8rem;
+  box-sizing: border-box; /* la caja incluye el padding y el borde */
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+header nav ul {
+  display: flex;
+  gap: 3rem; /* separacion entre campos */
+  flex-wrap: wrap; /* permite que los elemento de la caja se acomeden de acuerdo al tamaño de la ventana */
+}
+
+header nav ul li a {
+  color: rgb(0 47 167);
+  font-size: 1.5rem;
+  font-style: unset; /* quita el subsarayado del link */
+  /* font-weight: bold; */
+}
+
+.titulo {
+  /* font-family: Helvetica, sans-serif; */
+  font-size: 2.5rem;
+  /* text-align: center; */
+  /* font-weight: bold; */
+}
+
+.subtitulo {
+  /* font-family: Helvetica, sans-serif; */
+  font-size: 2rem;
+  /* text-align: center; */
+}
+
+#seccion-1 {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 8rem 4rem 2rem 4rem;
+}
+
+#seccion-2 {
+  /* background-color: rgb(0, 255, 4); */
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+  /* width: 100%;
+  height: 100%; */
+  /* block-size: auto; */
+  /* padding: 0; */
+}
+
+#perfil {
+  background-color: rgb(247, 152, 223);
+  padding: 5em 4rem 2rem 4rem;
+  /* display: flex;
+  flex-wrap: wrap; */
+  /* flex-direction: column; */
+  /* align-items: center;
+  justify-content: center; */
+}
+
+/* #foto-ac {
+  top: 0;
+  position: relative;
+  border-radius: 1.5rem;
+} */
+
+p {
+  font-size: 1.6rem;
+  text-align: justify;
+  color: #5d6063;
+  margin-top: 2rem;
+  /* background-color: #eaedf0; */
+  /* font-family: "Helvetica", "Arial", sans-serif; */
+}
+
+
+/* .principal {
+  margin-right: 2rem;
+} */
+
+footer {
+  background-color: rgb(187, 187, 187);
+  color: rgb(0 47 167);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: fixed; */
+  /* position: sticky; */
+  /* con position: sticky funciona pero siempre hay que darle el posiconamiento con top: 0px y no requiere el width pero hace un pequeño salto cuando se scroll y hay que quitar margen superior de la proxima etiqueta del header en este caso. ref: https://youtu.be/H9PQXvdR3WQ?t=247 */
+  bottom: 0rem;
+  /* left: 140rem; */
+  width: 100%;
+  height: 5rem;
+  box-sizing: border-box; /* la caja incluye el padding y el borde */
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+/* MENU */
+#check {
+  display: none;
+}
+
+.checkbtn {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  float: right;
+  line-height: 3rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+/* RESPONSIVE */
+
+/* Estilos para pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  /* Aquí puedes escribir los estilos que se aplicarán en pantallas pequeñas */
+  header {
+    background-color: orange;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .checkbtn {
+    display: block;
+  }
+
+  #encabezado ul {
+    position: fixed;
+    width: 30%;
+    height: 50vh; /* vh para que ocupe el largo de la patalla que estamos viendo */
+    background: gray;
+    text-align: center;
+    top: 5rem;
+    right: 100%;
+    transition: all 0.5s;
+  }
+
+  /* cuando al boton se le de ckick */
+  /* el simbolo ~ (ALT+126) sirve para seleccionar todos los elementos despues del ul */
+  #check:checked ~ ul {
+    right: 0;
+    display: block;
+  }
+
+  #encabezado nav ul li {
+    display: block;
+    margin: 2rem;
+    line-height: 1.5rem;
+    /* background-color: aquamarine; */
+  }
+  #encabezado nav ul li a {
+    font-size: 1.2rem;
+  }
+  #check:checked ~ .checkbtn {
+    color: rgb(49, 43, 226); /* cambia el color del boton del menu cuando se le de click */
+  }
+}
+
+/* CSS FORMULARIOS */
+/* ------------- CSS General ------------- */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* body {
+  color: #5d6063;
+  background-color: #eaedf0;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+} */
+
+/* ------------- Encabezado Contacto ------------- */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-header {
+  text-align: center;
+  background-color: #f6f7f8;
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+
+  width: 80%;
+  margin: 10px auto;
+  padding: 50px;
+}
+
+.form-header h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* ------------- Formulario ------------- */
+
+.formulario {
+  background-color: #f6f7f8;
+  border: 1px solid #d6d9dc;
+  border-radius: 3px;
+
+  width: 80%;
+  padding: 50px;
+  margin: 30px 0 40px 0;
+}
+
+/* ------------- Campos del Formulario ------------- */
+
+.form-row {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form-row input[type="text"], /* Este selector en CSS es un selector de atributo que aplica el CSS a los elementos que sean input de tipo text */
+.form-row input[type="email"]  {
+  background-color: #bdbdbd;
+  border: 0;
+  border-radius: 6px;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+}
+
+.form-row label {
+  margin-bottom: 3px;
+  text-align: initial;
+}
+
+/* ------------- Para Pantallas de más de 700px ------------- */
+@media only screen and (min-width: 700px) {
+.form-header {
+  padding: 50px;
+}
+
+.form-row {
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.form-row input[type="text"] {
+  width: 250px;
+  height: initial;
+}
+.form-row label {
+  text-align: right;
+  width: 120px;
+  margin-top: 7px;
+  padding-right: 20px;
+}
+}
+
+.form-row textarea {
+font-family: "Helvetica", "Arial", sans-serif;
+font-size: 14px;
+
+
+background-color: #bdbdbd;
+border: 0;
+border-radius: 6px;
+
+
+min-height: 200px;
+margin-bottom: 10px;
+padding: 7px;
+resize: none;
+
+
+width: 100%;
+}
+/* ------------- Para Pantallas de más de 700px ------------- */
+
+
+.form-row textarea {
+  width: 250px;
+}
+
+.form-row button {
+  font-size: 16px;
+  font-weight: bold;
+
+
+  color: #ffffff;
+  background-color: #5995da;
+
+
+  border: none;
+  border-radius: 3px;
+
+
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+
+.form-row button:hover {
+  background-color: #76aeed;
+}
+
+
+.form-row button:active {
+  background-color: #407fc7;
+}
+
+
+/* ------------- Para Pantallas de más de 700px ------------- */
+
+
+.form-row button {
+    margin-left: 120px;
+}
+  
+
+

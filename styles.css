@@ -352,6 +352,10 @@ width: 100%;
 .form-row button {
     margin-left: 120px;
 }
+
+#greeting {
+font-size: 20rem;
+}
   
 
 
